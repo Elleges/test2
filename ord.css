@@ -1,0 +1,26 @@
+dfn.maskin::after{
+  content: "Här står en hjälpsam förklaring";
+  width: 150px;
+}
+
+dfn.rotera::after{
+  content: "Att snurra";
+  width: 100px;
+}
+
+
+dfn.kolliderar::after{
+  content: "Att krocka";
+  width: 100px;
+}
+
+
+dfn.elektronkanon::after{
+  content: "Mycket informativ förklaring";
+  width: 150px;
+}
+
+dfn.förklaring::after{
+  content: "Här står en hjälpsam förklaring";
+  width: 170px;
+}

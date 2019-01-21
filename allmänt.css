@@ -1,0 +1,112 @@
+body{
+  margin: 0;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  line-height: 20px;
+  background-color: white;
+}
+
+h1{
+  color: white;
+  padding: 15 0 15 0;
+  width:100%;
+  background-color: #004a80;
+  margin: 0;
+}
+
+#lång{
+  position: absolute;
+  top: 5px;
+  right: 30px;
+  height: 40px;
+  color: green;
+}
+
+#enkel{
+  position: absolute;
+  top: 5px;
+  right: 110px;
+  height: 40px;
+
+}
+
+p{
+  border: 40px;
+  padding: 15 0 0 0;
+  margin: 0 30px;
+}
+
+ul{
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  text-align: center;
+  background-color: #025fa6;
+  position: -webkit-sticky; /* Safari */
+  position: sticky;
+  top: 0;
+  border-width: 0 0 4 0;
+  border-color: #b4d3f9;
+  border-style: solid;
+}
+
+li{
+  display: inline-block;
+  max-width: 20%;
+}
+
+li a{
+  display: block;
+  padding: 8px;
+  color: white;
+  text-decoration: none;
+}
+
+li a:hover:not(.active){
+  text-decoration: underline;
+}
+
+/* Styling dfn tag to highlight the word with the tooltip */
+dfn {
+  color: #5353c6;
+  position: relative;
+}
+
+dfn::after {
+  content: attr(data-info);
+  display: inline;
+  position: absolute;
+  top: 22px; left: 0;
+  opacity: 0;
+  font-weight: 700;
+  line-height: 1.5em;
+  padding: 0.5em 0.8em;
+  background: rgba(0,0,0,0.8);
+  color: #fff;
+  pointer-events: none; /* This prevents the box from apearing when hovered. */
+  transition: opacity 250ms, top 250ms;
+  font-style: none;
+}
+
+dfn::before {
+  content: '';
+  display: block;
+  position: absolute;
+  top: 12px; left: 20px;
+  opacity: 0;
+  width: 0; height: 0;
+  border: solid transparent 5px;
+  border-bottom-color: rgba(0,0,0,0.8);
+  transition: opacity 250ms, top 250ms;
+}
+dfn:hover {z-index: 2;} /* Keeps the info boxes on top of other elements */
+dfn:hover::after,
+dfn:hover::before {opacity: 1;}
+dfn:hover::after {top: 30px;}
+dfn:hover::before {top: 20px;}
+
+.active{
+  background-color: #b4d3f9;
+  color: black;
+}
